@@ -12,7 +12,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: '秋建管理后台',
+  title: '建享好礼管理后台',
   pwa: false,
   iconfontUrl: '',
 } as LayoutSettings & {

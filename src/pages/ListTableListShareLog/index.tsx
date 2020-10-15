@@ -81,12 +81,35 @@ const TableList: React.FC<{}> = () => {
   const [selectedRowsState, setSelectedRows] = useState<TableListItem[]>([]);
   const columns: ProColumns<TableListItem>[] = [
     {
-      title: '工号',
-      dataIndex: 'card_number',
+      title: 'openid',
+      dataIndex: 'openid',
+      search: false
     },
     {
-      title: '邀请报名人数',
-      dataIndex: 'count',
+      title: '任务',
+      dataIndex: 'taskId',
+      key: 'taskId',
+      // filters: true,
+      valueEnum: {
+        '1': { text: '任务1',},
+        '2': {
+          text: '任务2',
+          // status: 'Error',
+        },
+        '3': {
+          text: '任务3',
+          // status: 'Success',
+        },
+        '4': {
+          text: '任务4',
+          // status: 'Processing',
+        },
+      },
+    },
+    {
+      title: '点击时间',
+      dataIndex: 'updatedAt',
+      search: false
     },
   ];
 
@@ -96,9 +119,8 @@ const TableList: React.FC<{}> = () => {
         headerTitle="达标用户"
         actionRef={actionRef}
         rowKey="key"
-        search={false}
         toolBarRender={false}
-        request={() => queryList()}
+        request={(params) => queryList(params)}
         columns={columns}
         rowSelection={false}
       />

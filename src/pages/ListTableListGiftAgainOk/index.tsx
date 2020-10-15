@@ -82,41 +82,26 @@ const TableList: React.FC<{}> = () => {
   const columns: ProColumns<TableListItem>[] = [
     {
       title: '手机号',
-      dataIndex: 'MblPh_No',
+      dataIndex: 'phone_number',
     },
     {
-      title: '身份证号',
-      dataIndex: 'Crdt_No',
+      title: '兑换内容',
+      dataIndex: 'cardName',
     },
     {
-      title: '达标内容',
-      dataIndex: 'createdAt',
-      render: (text, item) => {
-        return item.taskList.filter(item => {
-          return item.RESULT_FLAG == 1
-        }).map(item => {
-          return item.Opt_Dsc
-        }).join()
-      }
-    },
-    {
-      title: '报名时间',
-      dataIndex: 'createdAt',
+      title: '兑换时间',
+      dataIndex: 'updatedAt',
     },
   ];
 
   return (
     <PageContainer>
       <ProTable<TableListItem>
-        headerTitle="达标用户"
+        headerTitle="话费兑换用户"
         actionRef={actionRef}
         rowKey="key"
         search={false}
-        toolBarRender={() => [
-          <Button type="primary" onClick={() => window.open("https://api-ccb.zjy1994.com/qiuapi/statistics/getUserGiftAgainIsOkExport")}>
-            <PlusOutlined /> 导出
-          </Button>,
-        ]}
+        toolBarRender={false}
         request={() => queryList()}
         columns={columns}
         rowSelection={false}

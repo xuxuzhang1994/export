@@ -7,7 +7,7 @@ export async function queryRule(params?: TableListParams) {
   });
 }
 export async function queryList(params?: TableListParams) {
-  return request('https://api-ccb.zjy1994.com/qiuapi/statistics/getUserGiftAgainIsOk', {
+  return request('https://shccb-api.zjy1994.com/apiprod/statistics/getExchangeList', {
     params,
   });
 }

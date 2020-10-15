@@ -113,7 +113,7 @@ const TableList: React.FC<{}> = () => {
         rowKey="key"
         search={false}
         toolBarRender={() => [
-          <Button type="primary" onClick={() => window.open("https://api-ccb.zjy1994.com/qiuapi/statistics/getUserIsOkExport")}>
+          <Button type="primary" onClick={() => window.open("https://shccb-api.zjy1994.com/apiprod/statistics/getUserIsOkExport")}>
             <PlusOutlined /> 导出
           </Button>,
         ]}

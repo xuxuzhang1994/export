@@ -12,7 +12,7 @@ export default defineConfig({
     hmr: true,
   },
   layout: {
-    name: '秋建管理后台',
+    name: '建享好礼管理后台',
     locale: true,
   },
   locale: {
@@ -75,13 +75,13 @@ export default defineConfig({
       component: './ListTableListOk',
     },
     {
-      name: '礼上有礼达标用户',
+      name: '话费兑换用户',
       icon: 'table',
       path: '/listGiftAgainOk',
       component: './ListTableListGiftAgainOk',
     },
     {
-      name: '工号邀请统计',
+      name: '任务点击统计',
       icon: 'table',
       path: '/listGiftShareLog',
       component: './ListTableListShareLog',
